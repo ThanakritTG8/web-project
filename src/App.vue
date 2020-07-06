@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-  <navigation-bar />
-
+    <navigation-bar />
     <router-view/>
   </div>
 </template>
@@ -18,6 +17,5 @@ export default {
 </script>
 
 <style>
-  
 
 </style>

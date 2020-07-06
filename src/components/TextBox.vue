@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="col-6 text-left">
-        <router-link to="/Csv">
+        <router-link to="/csv/home">
             <button type="button" class="btn btn-primary">
             Import CSV
             </button>

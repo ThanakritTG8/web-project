@@ -6,18 +6,22 @@
 
 <script>
 export default {
-  name: "PosNeg",
-  data() {
-    return {
-      chartData: [
-        ["Task", "Hours per Day"],
-        ["Work", 11],
-        ["Eat", 2]
-      ],
-      chartOptions: {}
-    };
+    name: "accuracy",
+    data: () => ({
+        chartData: undefined,
+        chartOptions: {
+            
+        }
+    }),
+    mounted () {
+    this.$axios
+      .get('http://localhost:5000/PositiveAndNegative')
+      .then(({data}) => {
+          this.chartData = data
+      })
   }
-};
+
+}
 </script>
 
 <style>

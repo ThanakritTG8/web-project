@@ -1,21 +1,21 @@
 <template>
-  <div id="accuracy">
+  <div id="overview-word-negative">
     <GChart type="PieChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
 <script>
 export default {
-    name: "accuracy",
+    name: "overview-word-negative",
     data: () => ({
         chartData: undefined,
         chartOptions: {
-            pieHole: 0.6
+            
         }
     }),
     mounted () {
     this.$axios
-      .get('http://localhost:5000/CorrectNodeRatingType1Patong')
+      .get('http://localhost:5000/MuchInPatongNegative')
       .then(({data}) => {
           this.chartData = data
       })

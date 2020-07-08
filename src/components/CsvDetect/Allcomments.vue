@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 export default {
   name: "all-comments",
   data: () => ({
@@ -49,11 +50,12 @@ export default {
       ]
   }),
   mounted() {
-    this.$axios.get("http://localhost:5000/PatongBeachTripadvisor").then(({ data }) => {
+    this.$axios.get("http://localhost:5000/PatongBeachTripadvisor")
+    .then(({ data }) => {
       this.tableData = data;
     });
   }
-};
+}
 </script>
 
 <style scoped>

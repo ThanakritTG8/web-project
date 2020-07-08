@@ -2,28 +2,23 @@
   <div id="csv-body">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-        <count-comment />
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <all-sense-text />
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">common-word</div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <accuracy />
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <pos-neg />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="button text-center">
-          <button @click="more" type="button" class="btn btn-primary">More Detail</button>
+        <div class="card bg-white">
+          <div class="card-body">
+            <count-comment />
+          </div>
         </div>
-        <all-comments :comments="comments" v-if="click" />
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+        <div class="card bg-white">
+          <div class="card-body">
+            <all-sense-text />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+        <div class="card bg-white">
+          <div class="card-body">common-word</div>
+        </div>
       </div>
     </div>
   </div>
@@ -32,29 +27,12 @@
 <script>
 import CountComment from "@/components/CsvDetect/CountComment";
 import AllSenseText from "@/components/CsvDetect/AllSenseText";
-import Accuracy from "@/components/CsvDetect/Accuracy";
-import PosNeg from "@/components/CsvDetect/PosNeg";
-import AllComments from '@/components/CsvDetect/AllComments'
 
 export default {
   name: "csv-body",
-  data() {
-    return {
-      click: false
-    };
-  },
-  methods: {
-    more() {
-      this.click = true
-    }
-  },
-
   components: {
     CountComment,
-    AllSenseText,
-    Accuracy,
-    PosNeg,
-    AllComments
+    AllSenseText
   }
 };
 </script>
@@ -67,4 +45,9 @@ button {
   text-align: center;
   margin-top: 60px;
 }
+.card {
+  height: 300px;
+  margin-bottom: 50px;
+}
+
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div id="accuracy">
+  <h4>Detect Accuracy</h4>
     <GChart type="PieChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
@@ -10,7 +11,11 @@ export default {
     data: () => ({
         chartData: undefined,
         chartOptions: {
-            pieHole: 0.6
+            pieHole: 0.3, 
+            slices: {
+              0: { color: '#24F932'},
+              1: { color: '#FF4B4B'}
+            }
         }
     }),
     mounted () {

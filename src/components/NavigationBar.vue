@@ -3,7 +3,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-primary">
       <router-link to="/">
-        <nav-item class="nav-item" id="home">Home</nav-item>
+        <nav-item class="nav-item" id="home">Detect Word Sense</nav-item>
       </router-link>  
     </nav>
 

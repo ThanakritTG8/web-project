@@ -1,7 +1,6 @@
 <template>
   <div id="navigation-bar">
-
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <router-link to="/">
         <nav-item class="nav-item" id="home">Detect Word Sense</nav-item>
       </router-link>  
@@ -26,8 +25,15 @@ export default {
   #home {
     color:white;
     padding: .3rem;
-    font-size: 18px;
+    font-size: 25px;
     font-family: "Lato", Arial, sans-serif;
+    font-weight: 900;
+    font-family: 'Karla', sans-serif;
+    
+  }
+  
+  nav{
+    background: #17215a;
   }
 
 </style>

@@ -18,10 +18,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <div class="button text-center">
-          <button @click="more" type="button" class="btn btn-primary">More Detail</button>
-        </div>
-        <all-comments :comments="comments" v-if="click" />
+        <all-comments :comments="comments" />
       </div>
     </div>
   </div>
@@ -40,13 +37,11 @@ export default {
     },  
     data() {
         return {
-        click: false
+        
         };
     },
     methods: {
-        more() {
-        this.click = true;
-        }
+
     },
 };
 </script>

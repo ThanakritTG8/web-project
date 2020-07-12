@@ -1,23 +1,34 @@
 <template>
   <div id="csv-body">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card bg-white">
           <div class="card-body">
             <count-comment />
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="card bg-white">
+          <div class="card-body">
+            <accuracy />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card bg-white">
           <div class="card-body">
             <all-sense-text />
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card bg-white">
-          <div class="card-body">common-word</div>
+          <div class="card-body">
+            common-word
+          </div>
         </div>
       </div>
     </div>
@@ -27,12 +38,13 @@
 <script>
 import CountComment from "@/components/CsvDetect/CountComment";
 import AllSenseText from "@/components/CsvDetect/AllSenseText";
-
+import Accuracy from '@/components/CsvDetect/Accuracy'
 export default {
   name: "csv-body",
   components: {
     CountComment,
-    AllSenseText
+    AllSenseText,
+    Accuracy
   }
 };
 </script>
@@ -49,5 +61,4 @@ button {
   height: 300px;
   margin-bottom: 50px;
 }
-
 </style>

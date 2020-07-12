@@ -5,9 +5,9 @@
       <label for="check">
         <i class="fas fa-bars" id="sidebar_btn"></i>
       </label>
-      <router-link to="/">
+      <a href="/">
         <nav-item class="nav-item" id="home">Detect Word Sense</nav-item>
-      </router-link>
+      </a>
     </nav>
     <div class="sidebar">
       <a @click="home">
@@ -84,6 +84,10 @@ nav {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 900;
   font-family: "Karla", sans-serif;
+}
+
+#home:hover {
+  color: aqua;
 }
 
 nav {

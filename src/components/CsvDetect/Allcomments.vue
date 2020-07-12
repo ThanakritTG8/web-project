@@ -1,6 +1,6 @@
 <template>
   <div id="all-comments">
-    <table class="table">
+    <table class="table table-striped bg-white">
       <thead class="thead-inverse">
         <tr>
           <th v-for="(obj, ind) in config" :key="ind">{{ obj.title }}</th>
@@ -16,46 +16,32 @@
 </template>
 
 <script>
-
 export default {
   name: "all-comments",
   data: () => ({
-      tableData: undefined,
-      config: [
-          {
-              key: 'Review',
-              title: 'Review'
-          },
-          {
-              key: 'Name',
-              title: 'Name'
-          },
-          {
-              key: 'Address',
-              title: 'Address'
-          },
-          {
-              key: 'Time',
-              title: 'Date'
-          },
-          {
-              key: 'Rating',
-              title: 'Rating'
-          },
-          {
-              key: 'Thai',
-              title: 'Thai'
-          }
-          
-      ]
+    tableData: undefined,
+    config: [
+      {
+        key: "Review",
+        title: "Review"
+      },
+      {
+        key: "Rating",
+        title: "Rating"
+      }
+    ]
   }),
   mounted() {
-    this.$axios.get("http://localhost:5000/PatongBeachTripadvisor")
-    .then(({ data }) => {
-      this.tableData = data;
-    });
+    this.$axios
+      .get("http://localhost:5000/PatongBeachTripadvisor")
+      .then(({ data }) => {
+        this.tableData = data;
+      });
+  },
+  methods: {
+
   }
-}
+};
 </script>
 
 <style scoped>
@@ -69,7 +55,7 @@ table {
 table td,
 table th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 35px;
 }
 
 table tr:nth-child(even) {
@@ -83,7 +69,7 @@ table tr:hover {
 table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #4caf50;
   color: white;
 }

@@ -112,6 +112,15 @@ def PositiveAndNegativeEachDomain():
  return json.dumps(obj,indent=4,ensure_ascii=False)
 
 
+@app.route('/PositiveAndNegativePatongTrip')
+def PositiveAndNegativePatongTrip(): 
+ 
+ url="./testjson/jsonfile/PositiveAndNegativePatongTrip.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+
 @app.route('/PromthepCapeGoogleReviews')
 def PromthepCapeGoogleReviews(): 
  

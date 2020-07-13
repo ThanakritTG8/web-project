@@ -1,6 +1,6 @@
 <template>
   <div id="home-csv">
-  <input type="checkbox" id="check" />
+    <input type="checkbox" id="check" />
     <nav class="navbar navbar-expand-lg fixed-top">
       <label for="check">
         <i class="fas fa-bars" id="sidebar_btn"></i>
@@ -9,24 +9,25 @@
         <nav-item class="nav-item" id="home">Detect Word Sense</nav-item>
       </a>
     </nav>
+
     <div class="sidebar">
-      <a @click="home">
+      <a id class="btn text-left" @click="home" role="button">
         <i class="fas fa-desktop"></i>
         <span>Dashboard</span>
       </a>
-      <a @click="comment">
-        <i class="fas fa-cogs"></i>
-        <span>Components</span>
-      </a>
-      <a @click="common">
+      <a id class="btn text-left" @click="comment" role="button">
         <i class="fas fa-table"></i>
-        <span>Tables</span>
+        <span>Comment</span>
+      </a>
+      <a id class="btn text-left" @click="common" role="button">
+        <i class="fas fa-comments"></i>
+        <span>Common Word</span>
       </a>
     </div>
     <section>
-      <csv-body v-if="enter" />
-      <comment-page v-if="to" />
-      <common-word-page v-if="direct" />
+      <csv-body v-if="homepage" />
+      <comment-page v-if="commentpage" />
+      <common-word-page v-if="commonword" />
     </section>
   </div>
 </template>
@@ -35,38 +36,36 @@
 import CsvBody from "@/components/CsvDetect/CsvBody";
 import CommonWordPage from "@/components/CsvDetect/CommonWordPage";
 import CommentPage from "@/components/CsvDetect/CommentPage";
-import NavigationBar from "@/components/NavigationBar";
 
 export default {
   name: "home-csv",
   components: {
     CsvBody,
     CommonWordPage,
-    CommentPage,
-    NavigationBar
+    CommentPage
   },
   data() {
     return {
-      enter: true,
-      to: false,
-      direct: false
+      homepage: true,
+      commentpage: false,
+      commonword: false
     };
   },
   methods: {
     home() {
-      this.enter = true;
-      this.to = false;
-      this.direct = false;
+      this.homepage = true;
+      this.commentpage = false;
+      this.commonword = false;
     },
     comment() {
-      this.enter = false;
-      this.to = true;
-      this.direct = false;
+      this.homepage = false;
+      this.commentpage = true;
+      this.commonword = false;
     },
     common() {
-      this.enter = false;
-      this.to = false;
-      this.direct = true;
+      this.homepage = false;
+      this.commentpage = false;
+      this.commonword = true;
     }
   }
 };
@@ -117,40 +116,23 @@ section {
   transition-property: left;
 }
 
-.sidebar .profile_image {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-
-.sidebar h4 {
-  color: #ccc;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
 .sidebar a {
   color: #fff;
-  display: block;
   width: 100%;
   line-height: 60px;
-  text-decoration: none;
-  padding-left: 40px;
-  box-sizing: border-box;
-  transition: 0.5s;
-  transition-property: background;
+  padding-left: 30px;
 }
 
 .sidebar a:hover {
   background: #15cca4;
 }
 
+
 .sidebar i {
   padding-right: 10px;
 }
 
-label #sidebar_btn{
+label #sidebar_btn {
   z-index: 1;
   color: #fff;
   position: fixed;
@@ -176,9 +158,10 @@ label #sidebar_btn:hover {
 
 #check:checked ~ .sidebar a {
   font-size: 20px;
-  margin-left: 170px;
+  margin-left: 177px;
   width: 80px;
 }
+
 #check {
   display: none;
 }

@@ -25,7 +25,9 @@ export default {
       },
       vAxis: {
         title: "Action Text"
-      }
+      },
+      legend: {position: 'none'},
+      backgroundColor: 'none'
     }
   })
 };

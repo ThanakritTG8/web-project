@@ -14,7 +14,8 @@ export default {
             slices: {
               0: { color: '#24F932'},
               1: { color: '#FF4B4B'}
-            }
+            },
+            backgroundColor: 'none'
         }
     }),
     mounted () {

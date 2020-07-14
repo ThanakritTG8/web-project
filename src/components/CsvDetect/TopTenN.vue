@@ -25,7 +25,9 @@ export default {
       },
       vAxis: {
         title: "About Place Text"
-      }
+      },
+      legend: {position: 'none'},
+      backgroundColor: 'none'
     }
   })
 };

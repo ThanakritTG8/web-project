@@ -23,7 +23,9 @@ export default {
       },
       vAxis: {
         title: "Character Text"
-      }
+      },
+      legend: {position: 'none'},
+      backgroundColor: 'none'
     }
   })
 };

@@ -24,7 +24,9 @@ export default {
       },
       vAxis: {
         title: "Sense Text"
-      }
+      },
+      legend: {position: 'none'}, 
+      backgroundColor: 'none'
     }
   })
 };

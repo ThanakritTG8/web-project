@@ -23,7 +23,9 @@ export default {
       },
       vAxis: {
         title: "Emotion Text"
-      }
+      },
+      legend: {position: 'none'},
+      backgroundColor: 'none'
     }
   })
 };

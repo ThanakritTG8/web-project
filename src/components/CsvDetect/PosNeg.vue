@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    name: "accuracy",
+    name: "pos-neg",
     data: () => ({
         chartData: undefined,
         chartOptions: {
@@ -19,7 +19,7 @@ export default {
     }),
     mounted () {
     this.$axios
-      .get('http://localhost:5000/PositiveAndNegative')
+      .get('http://localhost:5000/PositiveAndNegativePatongTrip')
       .then(({data}) => {
           this.chartData = data
       })

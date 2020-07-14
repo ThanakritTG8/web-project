@@ -5,6 +5,12 @@ import App from './App'
 import router from './router'
 import VueGoogleCharts from 'vue-google-charts'
 import axios from 'axios'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 Vue.use(VueGoogleCharts)
 Vue.prototype.$axios = axios

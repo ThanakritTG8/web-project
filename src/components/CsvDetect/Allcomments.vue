@@ -1,17 +1,17 @@
 <template>
   <div id="all-comments">
-    <table class="table table-striped bg-white">
-      <thead class="thead-inverse">
-        <tr>
-          <th v-for="(obj, ind) in config" :key="ind">{{ obj.title }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(row, index) in tableData" :key="index">
-          <td v-for="(obj, ind) in config" :key="ind">{{ row[obj.key] }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="table table-striped bg-white">
+        <thead class="thead-inverse">
+          <tr>
+            <th v-for="(obj, ind) in config" :key="ind">{{ obj.title }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(row, index) in theData" :key="index">
+            <td v-for="(obj, ind) in config" :key="ind">{{ row[obj.key] }}</td>
+          </tr>
+        </tbody>
+      </table> 
   </div>
 </template>
 
@@ -19,32 +19,15 @@
 export default {
   name: "all-comments",
   data: () => ({
-    tableData: undefined,
-    config: [
-      {
-        key: "Review",
-        title: "Review"
-      },
-      {
-        key: "Rating",
-        title: "Rating"
-      }
-    ]
-  }),
-  mounted() {
-    this.$axios
-      .get("http://localhost:5000/PatongBeachTripadvisor")
-      .then(({ data }) => {
-        this.tableData = data;
-      });
-  },
-  methods: {
 
-  }
+  }),
+  props: ['theData', 'config']
+
 };
 </script>
 
 <style scoped>
+
 table {
   margin-top: 50px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

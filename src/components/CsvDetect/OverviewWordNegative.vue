@@ -10,7 +10,9 @@ export default {
     data: () => ({
         chartData: undefined,
         chartOptions: {
-            
+            legend: {
+              position: 'left'
+            }
         }
     }),
     mounted () {

@@ -6,7 +6,10 @@ import router from './router'
 import VueGoogleCharts from 'vue-google-charts'
 import axios from 'axios'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Paginate from 'vuejs-paginate'
 
+// Install vue-paginate
+Vue.component('paginate', Paginate)
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin

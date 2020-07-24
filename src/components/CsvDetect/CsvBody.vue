@@ -27,7 +27,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card">
           <div class="card-body">
-            common-word
+            <common-word-cloud />
           </div>
         </div>
       </div>
@@ -39,12 +39,15 @@
 import CountComment from "@/components/CsvDetect/CountComment";
 import AllSenseText from "@/components/CsvDetect/AllSenseText";
 import Accuracy from '@/components/CsvDetect/Accuracy'
+import CommonWordCloud from '@/components/CsvDetect/CommonWordCloud'
+
 export default {
   name: "csv-body",
   components: {
     CountComment,
     AllSenseText,
-    Accuracy
+    Accuracy,
+    CommonWordCloud
   }
 };
 </script>

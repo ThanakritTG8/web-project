@@ -1,7 +1,7 @@
 <template>
   <div id="all-sense-text">
     <h4 class="text-center">All Sense Text</h4>
-    <GChart type="BarChart" :data="chartData" :options="chartOptions" />
+    <GChart id="chart" type="ColumnChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
@@ -16,7 +16,8 @@ export default {
   data: () => ({
     chartData: undefined,
     chartOptions: {
-      chartArea: { width: "60%" },
+      width: 900,
+      height: 400,
       colors: [{color: '#69ABFF'}],
       hAxis: {
         title: "Total Word",

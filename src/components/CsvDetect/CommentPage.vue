@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8">  
+      <div class="col-lg-12">  
         <pagination 
         v-if="tableData"
         :totalRecords="tableData.length"
@@ -31,7 +31,7 @@
         :style="{height: '600px'}"
         />
       </div>
-      <div class="col-lg-4"></div>
+      
     </div>
   </div>
 </template>

@@ -2,6 +2,7 @@
   <div id="common-word-cloud">
     <h4 class="text-center">TG Text</h4>
         <wordcloud
+        class="wordcloud"
         :data="defaultWords"
         nameKey="name"
         valueKey="value"
@@ -37,8 +38,9 @@ export default {
 </script>
 
 <style scoped>
-#all-sense-text {
+.wordcloud {
   font-family: "Lato", Arial, sans-serif;
-  text-transform: uppercase;
+  width: 500px;
+  height: 300px;
 }
 </style>

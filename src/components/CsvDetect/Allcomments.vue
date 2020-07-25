@@ -1,6 +1,6 @@
 <template>
   <div id="all-comments">
-      <table class="table table-striped bg-white">
+      <table class="table table-striped">
         <thead class="thead-inverse">
           <tr>
             <th v-for="(obj, ind) in config" :key="ind">{{ obj.title }}</th>
@@ -11,49 +11,39 @@
             <td v-for="(obj, ind) in config" :key="ind">{{ row[obj.key] }}</td>
           </tr>
         </tbody>
-      </table> 
-  </div>
+      </table>
+    </div>
 </template>
 
 <script>
 export default {
   name: "all-comments",
-  data: () => ({
-
-  }),
-  props: ['theData', 'config']
-
+  data: () => ({}),
+  props: ["theData", "config"],
 };
 </script>
 
 <style scoped>
-
 table {
-  margin-top: 50px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  background: rgb(253, 252, 252);
+  border: 1px solid rgb(116, 114, 114);
+  border-radius: 20px;
 }
-
 table td,
 table th {
-  border: 1px solid #ddd;
+  border: 1px;
   padding: 35px;
 }
-
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
 table tr:hover {
   background-color: #ddd;
 }
-
 table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #4caf50;
-  color: white;
+  background: rgb(72, 241, 157);
+}
+table tr {
+  border: 1px solid rgb(161, 161, 161);
 }
 </style>

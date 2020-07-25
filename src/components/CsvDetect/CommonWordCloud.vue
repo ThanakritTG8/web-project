@@ -21,7 +21,7 @@ export default {
       wordcloud
   },
   mounted() {
-    this.$axios.get("http://localhost:5000/cloudAdjPatong").then(({ data }) => {
+    this.$axios.get("http://localhost:5000/cloudAdjPatongName").then(({ data }) => {
       this.defaultWords = data;
     });
   },

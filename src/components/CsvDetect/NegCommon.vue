@@ -1,18 +1,25 @@
 <template>
   <div id="neg-common">
     <div class="row">
+      <div class="col-lg-12">
+        <h4 class="title text-center">All Negative</h4>
+        <div class="title text-center">
+          <overview-word-negative />
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-lg-6">
         <div class="card text-left">
           <div class="card-body">
-            <h4 class="card-title text-center">All Negative</h4>
-            <overview-word-negative />
+            <top-ten-n-neg />
           </div>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="card text-left">
           <div class="card-body">
-            overview-text 
+            <top-ten-v-neg />
           </div>
         </div>
       </div>
@@ -21,30 +28,14 @@
       <div class="col-lg-6">
         <div class="card text-left">
           <div class="card-body">
-            top-ten-n 
+            <top-ten-adj-neg />
           </div>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="card text-left">
           <div class="card-body">
-            top-ten-v 
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card text-left">
-          <div class="card-body">
-            <top-ten-adj />
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="card text-left">
-          <div class="card-body">
-            <top-ten-adv />
+            <top-ten-adv-neg />
           </div>
         </div>
       </div>
@@ -54,12 +45,21 @@
 
 <script>
 import OverviewWordNegative from '@/components/CsvDetect/OverviewWordNegative'
+import TopTenAdjNeg from '@/components/CsvDetect/TopTenAdjNeg'
+import TopTenAdvNeg from '@/components/CsvDetect/TopTenAdvNeg'
+import TopTenNNeg from '@/components/CsvDetect/TopTenNNeg'
+import TopTenVNeg from '@/components/CsvDetect/TopTenVNeg'
 
 export default {
   name: "neg-common",
   components: {
-      OverviewWordNegative
-  }
+    OverviewWordNegative,
+    TopTenAdjNeg,
+    TopTenAdvNeg,
+    TopTenNNeg,
+    TopTenVNeg
+
+  },
 };
 </script>
 
@@ -67,5 +67,7 @@ export default {
 .card {
   margin-bottom: 20px;
   height: 300px;
+  background: rgb(241, 239, 239);
+  border-radius: 20px;
 }
 </style>

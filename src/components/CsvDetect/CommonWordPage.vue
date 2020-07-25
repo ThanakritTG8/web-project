@@ -22,7 +22,7 @@ import PosCommon from '@/components/CsvDetect/PosCommon'
 import NegCommon from '@/components/CsvDetect/NegCommon'
 
 export default {
-  name: "common-word-page-positive",
+  name: "common-word-page",
   components: {
       PosCommon,
       NegCommon

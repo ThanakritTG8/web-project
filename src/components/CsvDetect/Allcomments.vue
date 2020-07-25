@@ -30,7 +30,6 @@ table {
   width: 100%;
   background: rgb(253, 252, 252);
   border: 1px solid rgb(116, 114, 114);
-  border-radius: 20px;
 }
 table td,
 table th {

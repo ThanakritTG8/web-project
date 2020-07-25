@@ -79,6 +79,6 @@ button {
   height: 480px;
 }
 #common-word-cloud{
-  height: 400px
+  height: 400px;
 }
 </style>

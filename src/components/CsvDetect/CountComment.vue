@@ -64,6 +64,5 @@ export default {
     border-radius: 60px;
     box-shadow: 0px 0px 5px rgb(5, 5, 5);
     padding: 0.6em 0.6em;
-
   }
 </style>

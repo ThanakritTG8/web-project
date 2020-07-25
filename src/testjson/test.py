@@ -112,15 +112,6 @@ def PositiveAndNegativeEachDomain():
  return json.dumps(obj,indent=4,ensure_ascii=False)
 
 
-@app.route('/PositiveAndNegativePatongTrip')
-def PositiveAndNegativePatongTrip(): 
- 
- url="./testjson/jsonfile/PositiveAndNegativePatongTrip.json"
- with open(url, encoding="utf8") as f: 
-  obj = json.load(f)
- return json.dumps(obj,indent=4,ensure_ascii=False)
-
-
 @app.route('/PromthepCapeGoogleReviews')
 def PromthepCapeGoogleReviews(): 
  
@@ -426,6 +417,89 @@ def SentenceWatLolipop():
  with open(url, encoding="utf8") as f: 
   obj = json.load(f)
  return json.dumps(obj,indent=4,ensure_ascii=False)
+
+
+@app.route('/cloudAdjPatongName')
+def cloudAdjPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudAdjPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+
+@app.route('/cloudAdvPatongName')
+def cloudAdvPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudAdvPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/cloudNounPatongName')
+def cloudNounPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudNounPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/cloudVerbPatongName')
+def cloudVerbPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudVerbPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/MuchinPatongNegArray')
+def MuchinPatongNegArray(): 
+ 
+ url="./testjson/jsonfile/MuchinPatongNegArray.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/MuchinPatongPosArray')
+def MuchinPatongPosArray(): 
+ 
+ url="./testjson/jsonfile/MuchinPatongPosArray.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/top10NegAdjPatong')
+def top10NegAdjPatong(): 
+ 
+ url="./testjson/jsonfile/top10NegAdjPatong.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/top10NegAdvPatong')
+def top10NegAdvPatong(): 
+ 
+ url="./testjson/jsonfile/top10NegAdvPatong.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/top10NegNounPatong')
+def top10NegNounPatong(): 
+ 
+ url="./testjson/jsonfile/top10NegNounPatong.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/top10NegVerbPatong')
+def top10NegVerbPatong(): 
+ 
+ url="./testjson/jsonfile/top10NegVerbPatong.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
 
 
 if __name__ == '__main__':

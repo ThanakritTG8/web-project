@@ -10,7 +10,8 @@ export default {
     data: () => ({
         chartData: undefined,
         chartOptions: {
-            
+            backgroundColor: "none",
+            width:700
         }
     }),
     mounted () {

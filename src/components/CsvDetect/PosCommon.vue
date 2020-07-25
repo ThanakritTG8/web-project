@@ -77,5 +77,7 @@ export default {
 .card {
   margin-bottom: 20px;
   height: 300px;
+  background: rgb(241, 239, 239);
+  border-radius: 20px;
 }
 </style>

@@ -1,0 +1,15 @@
+[
+    { "name": "มาก", "value": 20  },
+    { "name": "ที่สุด", "value": 7 },
+    { "name": "มากมาย", "value": 6 },
+    { "name": "ก็", "value": 6 },
+    { "name": "ไว้", "value": 5 },
+    { "name": "ใกล้เคียง", "value": 4 },
+    { "name": "น้อย", "value": 3 },
+    { "name": "สะอาด", "value":2  },
+    { "name": "ยัง", "value": 2 },
+    { "name": "กว่า", "value": 2 },
+    { "name": "แออัด", "value": 1 },
+    { "name": "อีกหน่อย", "value": 1 }
+     
+]

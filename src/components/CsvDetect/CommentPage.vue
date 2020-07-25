@@ -1,9 +1,10 @@
 <template>
   <div id="comment-page">
+  <div id="space"></div>
     <div class="row">
       <div class="col-lg-8" id="comments">
         <pagination
-          class="text-right"
+          class="paginate text-right"
           v-if="tableData"
           :totalRecords="tableData.length"
           :perPageOptions="perPageOptions"
@@ -12,6 +13,7 @@
         <all-comments v-if="tableData" :theData="computedTableData" :config="config" />
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+      <div id="blank"></div>
         <div class="card bg-white">
           <div class="card-body">
             <accuracy />
@@ -88,11 +90,16 @@ export default {
 <style scoped>
 .card {
   height: 300px;
-  margin-top: 95px;
   border-radius: 20px;
+  margin-bottom: 35px;
 }
-#comments{
-  margin-top: 50px;
+#space {
+  margin-top: 60px;
 }
-
+#blank {
+  margin-top: 60px;
+}
+.paginate {
+  margin-bottom: 30px;
+}
 </style>

@@ -18,15 +18,15 @@
 </template>
 
 <script>
-import PosCommon from '@/components/CsvDetect/PosCommon'
-import NegCommon from '@/components/CsvDetect/NegCommon'
+import PosCommon from "@/components/CsvDetect/PosCommon";
+import NegCommon from "@/components/CsvDetect/NegCommon";
 
 export default {
   name: "common-word-page",
   components: {
-      PosCommon,
-      NegCommon
-  }
+    PosCommon,
+    NegCommon,
+  },
 };
 </script>
 

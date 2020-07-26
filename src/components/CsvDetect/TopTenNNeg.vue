@@ -17,7 +17,7 @@ export default {
   data: () => ({
     chartData: undefined,
     chartOptions: {
-      chartArea: { width: "75%" },
+      chartArea: { width: "60%" },
       colors: [{ color: "#73FD64" }],
       hAxis: {
         title: "Total Word",

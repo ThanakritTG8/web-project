@@ -25,14 +25,30 @@
       <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card" id="common-word-cloud">
           <div class="card-body">
-            <common-word-cloud />
+            <common-word-cloud-noun />
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card" id="common-word-cloud">
           <div class="card-body">
-            <common-word-cloud />
+            <common-word-cloud-adj />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="card" id="common-word-cloud">
+          <div class="card-body">
+            <common-word-cloud-adv />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="card" id="common-word-cloud">
+          <div class="card-body">
+            <common-word-cloud-verb />
           </div>
         </div>
       </div>
@@ -44,7 +60,10 @@
 import CountComment from "@/components/CsvDetect/CountComment";
 import AllSenseText from "@/components/CsvDetect/AllSenseText";
 import Accuracy from '@/components/CsvDetect/Accuracy'
-import CommonWordCloud from '@/components/CsvDetect/CommonWordCloud'
+import CommonWordCloudAdj from '@/components/CsvDetect/CommonWordCloudAdj'
+import CommonWordCloudAdv from '@/components/CsvDetect/CommonWordCloudAdv'
+import CommonWordCloudNoun from '@/components/CsvDetect/CommonWordCloudNoun'
+import CommonWordCloudVerb from '@/components/CsvDetect/CommonWordCloudVerb'
 
 export default {
   name: "csv-body",
@@ -52,7 +71,10 @@ export default {
     CountComment,
     AllSenseText,
     Accuracy,
-    CommonWordCloud
+    CommonWordCloudAdj,
+    CommonWordCloudAdv,
+    CommonWordCloudNoun,
+    CommonWordCloudVerb
   }
 };
 </script>
@@ -79,6 +101,6 @@ button {
   height: 480px;
 }
 #common-word-cloud{
-  height: 400px;
+  height: 350px;
 }
 </style>

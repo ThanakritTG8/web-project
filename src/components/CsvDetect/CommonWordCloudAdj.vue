@@ -1,6 +1,6 @@
 <template>
-  <div id="common-word-cloud">
-    <h4 class="text-center">TG Text</h4>
+  <div id="common-word-cloud-adj">
+    <h4 class="text-center">Emotion</h4>
         <wordcloud
         class="wordcloud"
         :data="defaultWords"
@@ -16,7 +16,7 @@
 <script>
 import wordcloud from 'vue-wordcloud'
 export default {
-  name: 'common-word-cloud',
+  name: 'common-word-cloud-adj',
   components: {
       wordcloud
   },
@@ -40,7 +40,7 @@ export default {
 <style scoped>
 .wordcloud {
   font-family: "Lato", Arial, sans-serif;
-  width: 500px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
 }
 </style>

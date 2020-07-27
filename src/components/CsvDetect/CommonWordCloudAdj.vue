@@ -40,7 +40,7 @@ export default {
 <style scoped>
 .wordcloud {
   font-family: "Lato", Arial, sans-serif;
-  width: 400px;
+  width: 100%;
   height: 250px;
 }
 </style>

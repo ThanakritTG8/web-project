@@ -112,15 +112,6 @@ def PositiveAndNegativeEachDomain():
  return json.dumps(obj,indent=4,ensure_ascii=False)
 
 
-@app.route('/PositiveAndNegativePatongTrip')
-def PositiveAndNegativePatongTrip(): 
- 
- url="./testjson/jsonfile/PositiveAndNegativePatongTrip.json"
- with open(url, encoding="utf8") as f: 
-  obj = json.load(f)
- return json.dumps(obj,indent=4,ensure_ascii=False)
-
-
 @app.route('/PromthepCapeGoogleReviews')
 def PromthepCapeGoogleReviews(): 
  
@@ -505,6 +496,38 @@ def top10NegNounPatong():
 def top10NegVerbPatong(): 
  
  url="./testjson/jsonfile/top10NegVerbPatong.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/cloudAdvNegPatongName')
+def cloudAdvNegPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudAdvNegPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/cloudAdjNegPatongName')
+def cloudAdjNegPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudAdjNegPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/cloudNounNegPatongName')
+def cloudNounNegPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudNounNegPatongName.json"
+ with open(url, encoding="utf8") as f: 
+  obj = json.load(f)
+ return json.dumps(obj,indent=4,ensure_ascii=False)
+
+@app.route('/cloudVerbNegPatongName')
+def cloudVerbNegPatongName(): 
+ 
+ url="./testjson/jsonfile/cloudVerbNegPatongName.json"
  with open(url, encoding="utf8") as f: 
   obj = json.load(f)
  return json.dumps(obj,indent=4,ensure_ascii=False)

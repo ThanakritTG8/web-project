@@ -12,13 +12,15 @@
           </tr>
         </tbody>
       </table>
+      <p v-for="data in theData" :key="data">{{ data.Rating }}</p>
     </div>
 </template>
 
 <script>
 export default {
   name: "all-comments",
-  data: () => ({}),
+  data: () => ({
+  }),
   props: ["theData", "config"],
 };
 </script>

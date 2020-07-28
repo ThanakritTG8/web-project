@@ -4,8 +4,8 @@
         <wordcloud
         class="wordcloud"
         :data="defaultWords"
-        nameKey="name"
-        valueKey="value"
+        nameKey="word"
+        valueKey="count"
         :color="Accent"
         :showTooltip="true"
         :wordClick="wordClickHandler">
@@ -30,7 +30,7 @@ export default {
 
   }),
     methods: {
-    wordClickHandler(name, value, vm) {
+    wordClickHandler(word, count, vm) {
       console.log('wordClickHandler', name, value, vm);
     }
   }

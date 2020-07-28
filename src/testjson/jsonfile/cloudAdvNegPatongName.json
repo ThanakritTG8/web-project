@@ -1,13 +1,13 @@
 [
-    { "name": "มาก" ,"value" :5 } ,
-    { "name": "ที่สุด" ,"value" :3 } ,
-    { "name": "เลย" ,"value" :2 } ,
-    { "name": "เกินไป" ,"value" :2 } ,
-    { "name": "ไม่ค่อย" ,"value" :1 } ,
-    { "name": "โดยเฉพาะอย่างยิ่ง" ,"value" :1 } ,
-    { "name": "มากมาย" ,"value" :1 } ,
-    { "name": "แน่นอน" ,"value" :1 } ,
-    { "name": "คุณ" ,"value" :1 } ,
-    { "name": "จึง" ,"value" :1 } ,
-    { "name": "เตียง" ,"value" :1 } 
+    { "word": "มาก" ,"count" :5 } ,
+    { "word": "ที่สุด" ,"count" :3 } ,
+    { "word": "เลย" ,"count" :2 } ,
+    { "word": "เกินไป" ,"count" :2 } ,
+    { "word": "ไม่ค่อย" ,"count" :1 } ,
+    { "word": "โดยเฉพาะอย่างยิ่ง" ,"count" :1 } ,
+    { "word": "มากมาย" ,"count" :1 } ,
+    { "word": "แน่นอน" ,"count" :1 } ,
+    { "word": "คุณ" ,"count" :1 } ,
+    { "word": "จึง" ,"count" :1 } ,
+    { "word": "เตียง" ,"count" :1 } 
     ]

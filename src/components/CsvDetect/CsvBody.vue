@@ -32,7 +32,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card" id="common-word-cloud">
           <div class="card-body">
-            <common-word-cloud-adj />
+          <common-word-cloud-verb />
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12 text-center">
         <div class="card" id="common-word-cloud">
           <div class="card-body">
-            <common-word-cloud-verb />
+            <common-word-cloud-adj />
           </div>
         </div>
       </div>

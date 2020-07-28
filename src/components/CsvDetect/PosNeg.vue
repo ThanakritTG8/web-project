@@ -15,7 +15,8 @@ export default {
               0: { color: '#24F932'},
               1: { color: '#FF4B4B'}
             },
-            backgroundColor: 'none'
+            backgroundColor: 'none',
+            legend: {position: 'top', alignment: 'center'}
         }
     }),
     mounted () {

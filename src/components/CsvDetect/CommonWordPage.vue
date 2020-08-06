@@ -3,14 +3,14 @@
     <b-card no-body>
       <b-tabs card>
         <b-tab title="Positive" active>
-          <b-card-text>
+          <b-card>
             <pos-common />
-          </b-card-text>
+          </b-card>
         </b-tab>
         <b-tab title="Negative">
-          <b-card-text>
+          <b-card>
             <neg-common />
-          </b-card-text>
+          </b-card>
         </b-tab>
       </b-tabs>
     </b-card>

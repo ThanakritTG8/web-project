@@ -1,7 +1,7 @@
 <template>
   <div id="all-comments">
-      <table class="table table-striped">
-        <thead class="thead-inverse">
+      <table class="table">
+        <thead class="thead">
           <tr>
             <th v-for="(obj, ind) in config" :key="ind">{{ obj.title }}</th>
           </tr>
@@ -12,7 +12,6 @@
           </tr>
         </tbody>
       </table>
-      <p v-for="data in theData" :key="data">{{ data.Rating }}</p>
     </div>
 </template>
 
@@ -42,9 +41,10 @@ table tr:hover {
   background-color: #ddd;
 }
 table th {
-  background: rgb(72, 241, 157);
+  background: rgb(140, 180, 255);
 }
 table tr {
   border: 1px solid rgb(161, 161, 161);
 }
+
 </style>

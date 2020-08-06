@@ -10,12 +10,8 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
-    },
-    {
-      path: '/csv/home',
-      name: '',
       component: HomeCsv
-    }
+    },
+ 
   ]
 })

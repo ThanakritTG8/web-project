@@ -94,6 +94,6 @@ export default {
         color: rgb(82, 82, 247);
     }
     a:hover {
-        color: rgb(5, 192, 120);
+        color: rgb(61, 233, 167);
     }
 </style>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <h4 class="title text-center">All Positive</h4>
-        <div class="title text-center">
+        <div class="title text-center" id="chart">
           <overview-word-positive />
         </div>
       </div>
@@ -65,8 +65,11 @@ export default {
 <style scoped>
 .card {
   margin-bottom: 20px;
-  height: 300px;
-  background: rgb(241, 239, 239);
+  height: 320px;
+  background: rgb(255, 255, 255);
   border-radius: 20px;
+}
+#chart {
+  margin-bottom: 30px;
 }
 </style>

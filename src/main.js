@@ -7,6 +7,10 @@ import VueGoogleCharts from 'vue-google-charts'
 import axios from 'axios'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Paginate from 'vuejs-paginate'
+import VueTabs from 'vue-nav-tabs'
+import 'vue-nav-tabs/themes/vue-tabs.css'
+
+Vue.use(VueTabs)
 
 // Install vue-paginate
 Vue.component('paginate', Paginate)

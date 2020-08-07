@@ -15,19 +15,20 @@ export default {
   data: () => ({
     chartData: undefined,
     chartOptions: {
-      chartArea: { width: "60%" },
+      width: "80%",
+      height: 250,
       colors: [{ color: "#FFFB5B" }],
       hAxis: {
         title: "Total Word",
-        minValue: 0
+        minValue: 0,
       },
       vAxis: {
-        title: "Character Text"
+        title: "Character Text",
       },
-      legend: {position: 'none'},
-      backgroundColor: 'none'
-    }
-  })
+      legend: { position: "none" },
+      backgroundColor: "none",
+    },
+  }),
 };
 </script>
 

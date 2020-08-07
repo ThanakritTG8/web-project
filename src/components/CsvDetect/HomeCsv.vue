@@ -26,7 +26,15 @@
     </div>
     <section>
       <csv-body v-if="homepage" />
-      <comment-page v-if="commentpage" />
+      <star-rating
+        v-if="star"
+        @rating-selected="setRating"
+        v-bind:show-rating="false"
+        inactive-color="#FFFFCC"
+        active-color="#FF3300"
+        star-size="30"
+      ></star-rating>
+      <comment-page v-if="commentpage" v-bind:value="value" />
       <common-word-page v-if="commonword" />
     </section>
   </div>
@@ -36,38 +44,53 @@
 import CsvBody from "@/components/CsvDetect/CsvBody";
 import CommonWordPage from "@/components/CsvDetect/CommonWordPage";
 import CommentPage from "@/components/CsvDetect/CommentPage";
+import StarRating from "vue-star-rating";
 
 export default {
   name: "home-csv",
   components: {
     CsvBody,
     CommonWordPage,
-    CommentPage
+    CommentPage,
+    StarRating,
   },
   data() {
     return {
       homepage: true,
       commentpage: false,
-      commonword: false
+      commonword: false,
+      star: false,
+      value: 0,
     };
   },
   methods: {
     home() {
+      this.star = false;
       this.homepage = true;
       this.commentpage = false;
       this.commonword = false;
     },
     comment() {
+      this.star = true;
       this.homepage = false;
       this.commentpage = true;
       this.commonword = false;
     },
     common() {
+      this.star = false;
       this.homepage = false;
       this.commentpage = false;
       this.commonword = true;
-    }
-  }
+    },
+    setRating(rating) {
+      this.value = rating;
+      this.commentpage = false;
+      this.$nextTick(() => {
+        // Add the component back in
+        this.commentpage = true;
+      });
+    },
+  },
 };
 </script>
 
@@ -126,7 +149,6 @@ section {
 .sidebar a:hover {
   background: #15cca4;
 }
-
 
 .sidebar i {
   padding-right: 10px;

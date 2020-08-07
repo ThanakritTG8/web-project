@@ -6,16 +6,21 @@
         <div class="row">
           <div class="col-lg-4"></div>
           <div class="col-lg-8">
+        
+
             <pagination
               class="paginate text-right"
-              v-if="tableData"
               :totalRecords="tableData.length"
               :perPageOptions="perPageOptions"
               v-model="pagination"
             />
           </div>
         </div>
-        <all-comments v-if="tableData" :theData="computedTableData" :config="config" />
+    
+        <all-comments
+          :theData="computedTableData"
+          :config="config"
+        />
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 text-center">
         <div id="blank"></div>
@@ -40,6 +45,7 @@ import PosNeg from "@/components/CsvDetect/PosNeg";
 import AllComments from "@/components/CsvDetect/AllComments";
 import Pagination from "@/components/CsvDetect/Pagination";
 
+
 const perPageOptions = [10, 20, 50];
 
 export default {
@@ -49,11 +55,12 @@ export default {
     PosNeg,
     AllComments,
     Pagination,
-  },
+    
+  },props:{value:Number},
   data: function () {
     return {
       perPageOptions,
-      tableData: undefined,
+      tableData: [],
       pagination: { page: 1, perPage: perPageOptions[0] },
       rating: 0,
       config: [
@@ -82,19 +89,27 @@ export default {
     },
   },
   mounted() {
+    var text = [];
     this.$axios
       .get("http://localhost:5000/PatongBeachTripadvisor")
       .then(({ data }) => {
-        this.tableData = data;
+        if(this.value==0){
+        for (const key in data) {
+            text.push(data[key]);
+        }      
+          this.tableData = text;
+        }
+        else{
+        for (const key in data) {
+          if ((data[key].Rating = this.value)) {
+            text.push(data[key]);
+          }
+          this.tableData = text;
+        }
+        }
       });
   },
-  methods: {
-    setRating: function (rating) {
-      this.rating = rating;
-      console.log(rating);
-    },
-  },
-};
+}
 </script>
 
 <style scoped>
@@ -103,9 +118,9 @@ export default {
   border-radius: 20px;
   margin-bottom: 35px;
 }
-#space {
+/* #space {
   margin-top: 60px;
-}
+} */
 #blank {
   margin-top: 60px;
 }

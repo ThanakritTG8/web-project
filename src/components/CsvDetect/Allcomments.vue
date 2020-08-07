@@ -1,5 +1,6 @@
 <template>
   <div id="all-comments">
+    {{value}}
       <table class="table">
         <thead class="thead">
           <tr>
@@ -20,7 +21,8 @@ export default {
   name: "all-comments",
   data: () => ({
   }),
-  props: ["theData", "config"],
+  props: ["theData", "config",],
+ 
 };
 </script>
 

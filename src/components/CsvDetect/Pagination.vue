@@ -1,5 +1,6 @@
 <template>
   <div id="pagination">
+    
     <section>
     <h4 class="pagination-container">
        <a href="#"> <i class="fa fa-chevron-circle-left" @click="changePage(0)"></i></a>
@@ -26,8 +27,11 @@
 </template>
 
 <script>
+
 export default {
+    
     name:'pagination',
+   
     props: ['totalRecords', 'perPageOptions'],
     data: function () {
         return {

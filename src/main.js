@@ -7,11 +7,16 @@ import VueGoogleCharts from 'vue-google-charts'
 import axios from 'axios'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Paginate from 'vuejs-paginate'
-import VueTabs from 'vue-nav-tabs'
-import 'vue-nav-tabs/themes/vue-tabs.css'
+import SortedTablePlugin from "vue-sorted-table";
+import { BSidebar } from 'bootstrap-vue'
+import { SidebarPlugin } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.use(VueTabs)
+Vue.use(SidebarPlugin)
+Vue.component('b-sidebar', BSidebar)
 
+Vue.use(SortedTablePlugin);
 // Install vue-paginate
 Vue.component('paginate', Paginate)
 // Install BootstrapVue

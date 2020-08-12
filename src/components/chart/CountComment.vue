@@ -6,10 +6,10 @@
         <i class="fa fa-comments"></i>
         </p>
       </div>
-      <div class="col-lg-6">
-        <p class="head text-right" id="text">All Comment</p>
+      <div class="col-lg-4">
+        <p class="head" id="text">All Comment</p>
         <p
-          class="lead text-right"
+          class="lead "
           id="numComment"
           v-for="countDatas in countCommentData"
           :key="countDatas"

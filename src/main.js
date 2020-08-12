@@ -26,7 +26,7 @@ const options = {
     'https://unpkg.com/kidlat-css/css/kidlat.css'
   ]
 }
-
+Vue.use(VueHtmlToPaper, options);
 Vue.use(SidebarPlugin)
 Vue.component('b-sidebar', BSidebar)
 

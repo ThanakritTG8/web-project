@@ -11,6 +11,7 @@
     </div>
     <div id="wordVerb">
     <h4 class="text-center">Action</h4>
+    
         <wordcloud
         class="wordcloud"
         :data="defaultWords"

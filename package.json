@@ -19,11 +19,7 @@
     "vue-google-charts": "^0.3.3",
     "vue-html-to-paper": "^1.3.1",
     "vue-router": "^3.0.1",
-<<<<<<< HEAD
-    "vue-star-rating": "^1.6.1",
-=======
     "vue-sorted-table": "^1.2.0",
->>>>>>> 57fbdd338452799e136d286e72fd9f9aea581143
     "vue-wordcloud": "^1.1.1",
     "vuejs-paginate": "^2.1.0"
   },
